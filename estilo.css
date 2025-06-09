@@ -240,7 +240,6 @@ footer {
   font-family: 'Amatic SC', cursive;
 }
 
-
 @media (max-width: 600px) {
   .galeria-platos {
     flex-direction: column;
@@ -261,3 +260,4 @@ footer {
     gap: 1rem;
   }
 }
+/*fin/*
