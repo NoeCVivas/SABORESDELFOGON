@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Sabores del Fogón</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <header>
+    <h1 class="especial">Contacto</h1>
+  </header>
+
+  <main>
+    <section>
+      <form id="formulario-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="descubrimiento">¿Cómo te enteraste de nuestra empresa?</label>
+        <select id="descubrimiento" name="descubrimiento" required>
+          <option value="">Seleccionar</option>
+          <option value="redes">Redes</option>
+          <option value="comentarios">Comentarios</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <div id="especifique-container" style="display: none;">
+          <label for="especifique">Especifique:</label>
+          <textarea id="especifique" name="especifique"></textarea>
+        </div>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sabores del Fogón</p>
+  </footer>
+
+  <script>
+    document.getElementById('descubrimiento').addEventListener('change', function () {
+      const especifique = document.getElementById('especifique-container');
+      especifique.style.display = this.value === 'otro' ? 'block' : 'none';
+    });
+
+    document.getElementById('formulario-contacto').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Mensaje enviado');
+    });
+  </script>
+</body>
+</html>
